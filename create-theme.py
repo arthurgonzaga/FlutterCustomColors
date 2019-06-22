@@ -28,7 +28,11 @@ def init():
 
 # Ask colors to the user
 def askColors():
-    numberOfColors = int(sys.argv[1])
+    try:
+        numberOfColors = int(sys.argv[1])
+    except ValueError:
+        print('This is not a number')
+        sys.exit()
     colors = ''
     index = 0
     while(index < numberOfColors):
@@ -36,7 +40,6 @@ def askColors():
             colors += str(raw_input()) 
         else:
             colors += str(raw_input()+ ",")
-        #print("colors: {}\nindex: {}".format(colors, index))
         index += 1
     splitArrayByString(colors)
 
