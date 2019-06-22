@@ -3,10 +3,10 @@
 git clone "https://github.com/arthurgonzaga/FlutterCustomColors.git"
 cd FlutterCustomColors
 ```
-Open command.sh in a text editor and change the PATH variable to this project folder
+Open command.sh in a text editor and change the PATH_FOLDER variable to this project folder
 ```
 ...
-PATH=~/path/to/FlutterCustomColors
+PATH_FOLDER=~/path/to/FlutterCustomColors
 ...
 ```
 Them type the following command:
@@ -14,7 +14,7 @@ Them type the following command:
 source ~/command.sh
 ```
 >You can find how to make the command available in the Terminal [here](https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e#b79f).
-
+>
 Then go to create-theme.py and set the CLASSNAME and FILENAME if you want.
 
 ```python
@@ -32,4 +32,4 @@ Then:
 ```bash
 <colorname>:<HEX>
 ```
->This will generate a dart code from your current path 
+>**This will generate a dart code from your current path**
