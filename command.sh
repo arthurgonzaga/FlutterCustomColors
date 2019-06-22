@@ -1,5 +1,5 @@
 #!/bin/bash
 function create-theme(){
-	PATH=~/Development/Desktop/Python/FlutterCustomColors
-    python $PATH/create-theme.py $1 $PWD
+	PATH_FOLDER=~/Development/Desktop/Python/FlutterCustomColors
+    python $PATH_FOLDER/create-theme.py $1 $PWD
 }
