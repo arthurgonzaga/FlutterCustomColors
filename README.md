@@ -9,7 +9,7 @@ Open command.sh in a text editor and change the PATH variable to this project fo
 PATH=~/path/to/FlutterCustomColors
 ...
 ```
-Them type the following command:
+Then type the following command:
 ```bash
 source ~/command.sh
 ```
