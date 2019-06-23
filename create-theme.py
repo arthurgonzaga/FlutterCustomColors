@@ -37,9 +37,19 @@ def askColors():
     index = 0
     while(index < numberOfColors):
         if(index+1 == numberOfColors):
-            colors += str(raw_input()) 
+            userInput = str(raw_input())
+            if(userInput.find(":") != -1):
+                colors += userInput
+            else:
+                print("Try using: <color name>:<hex color code>")
+                sys.exit()
         else:
-            colors += str(raw_input()+ ",")
+            userInput = str(raw_input())
+            if(userInput.find(":") != -1):
+                colors += userInput + ","
+            else:
+                print("Try using: <color name>:<hex color code>")
+                sys.exit()
         index += 1
     splitArrayByString(colors)
 
