@@ -1,7 +1,10 @@
+# Flutter Custom Colors
+Create color palette to flutter just typing a few commands in the terminal
 ### Install: 
 ```bash
 git clone "https://github.com/arthurgonzaga/FlutterCustomColors.git"
 cd FlutterCustomColors
+pip install -r requirements.txt
 ```
 Open command.sh in a text editor and change the PATH_FOLDER variable to this project folder
 ```
