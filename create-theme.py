@@ -10,11 +10,14 @@ arrayColorsAndNames = []
 # Flutter templates
 startTemplate = "import 'package:flutter/material.dart';\n\n"
 colorTemplate = "final MaterialColor {0} = MaterialColor({1}.{0}[500].value, {1}.{0});\n"
-classTemplate = "class {0}{{\n  {0}();\n"
+classTemplate = "\nclass {0}{{\n  {0}();\n"
 colorMapTemplate = "\n  static const Map<int, Color> {0} = <int, Color>{{\n    500: Color(0xFF{1}),\n  }};\n"
 
-# All the colors templates together from the array
+# All the colorsMap templates together from the array
 colorMapString = ""
+
+# All the colors templates together from the array
+colorString = ""
 
 # The final flutter code
 flutterCode = ""
@@ -25,7 +28,7 @@ path = str(sys.argv[2])
 # Call all the functions
 def init():
     askColors()
-    getAllColorsMapTogether(colorMapString, flutterCode)
+    getAllColorsMapTogether(colorString, colorMapString, flutterCode)
 
 # Ask colors to the user
 def askColors():
@@ -61,22 +64,22 @@ def splitArrayByString(string):
     for splittedIndex in splittedArray:
         arrayColorsAndNames.append(splittedIndex.split(":"))
 
-        
+
 # Get all the colors Together
-def getAllColorsMapTogether(color,colorMapString, flutterCode):
+def getAllColorsMapTogether(colorString,colorMapString, flutterCode):
     index = 0
     while index < len(arrayColorsAndNames):
         nameFromIndex = arrayColorsAndNames[index][0]
         colorFromIndex = arrayColorsAndNames[index][1].lstrip("#")
         colorMapString += colorMapTemplate.format(nameFromIndex, colorFromIndex)
 
-
+        colorString+= colorTemplate.format(nameFromIndex, CLASS_NAME)
         index += 1
-    createFlutterCode(colorMapString, flutterCode)
+    createFlutterCode(colorString, colorMapString, flutterCode)
 
 # Get all the templates together 
-def createFlutterCode(colorMapString, flutterCode):
-    flutterCode = startTemplate + classTemplate.format(CLASS_NAME) + colorMapString + "}"
+def createFlutterCode(colorString, colorMapString, flutterCode):
+    flutterCode = startTemplate + colorString + classTemplate.format(CLASS_NAME) + colorMapString + "}"
     createFile(flutterCode)
 
 # Create the Dart file
