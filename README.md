@@ -34,6 +34,3 @@ Then:
 ```
 <<<<<<< HEAD
 >**This will generate a dart code from your current path**
-=======
->This will generate a dart code from your current path 
->>>>>>> 8f84bf0d5a93cd5a67d4a795859349217204423d
