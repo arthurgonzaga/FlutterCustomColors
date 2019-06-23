@@ -32,5 +32,4 @@ Then:
 ```bash
 <colorname>:<HEX>
 ```
-<<<<<<< HEAD
 >**This will generate a dart code from your current path**
