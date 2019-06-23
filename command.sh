@@ -1,6 +1,6 @@
 #!/bin/bash
 function create-theme(){
-	PATH_FOLDER=~/Development/Desktop/Python/FlutterCustomColors
+	PATH_FOLDER=$PWD
     NUMBER_OF_COLORS=$1
     if [ -n "$NUMBER_OF_COLORS" ]
     then
