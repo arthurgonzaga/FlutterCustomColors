@@ -88,6 +88,8 @@ def createFile(string):
         flutterFile = open(FILE_NAME, "a+")
         flutterFile.write(string)
         flutterFile.close()
+    else:
+        print("Couldn't create a {0} because it already has one in the current path.".format(FILE_NAME))
 
 if __name__ == "__main__":
     init()
