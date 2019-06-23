@@ -9,7 +9,7 @@ arrayColorsAndNames = []
 
 # Flutter templates
 startTemplate = "import 'package:flutter/material.dart';\n\n"
-colorTemplate = "final MaterialColor {0} = MaterialColor({1}.{0}[500].value, {1}.{0});\n"
+MaterialColorTemplate = "final MaterialColor {0} = MaterialColor({1}.{0}[500].value, {1}.{0});\n"
 classTemplate = "\nclass {0}{{\n  {0}();\n"
 colorMapTemplate = "\n  static const Map<int, Color> {0} = <int, Color>{{\n    500: Color(0xFF{1}),\n  }};\n"
 
@@ -73,7 +73,7 @@ def getAllColorsMapTogether(colorString,colorMapString, flutterCode):
         colorFromIndex = arrayColorsAndNames[index][1].lstrip("#")
         colorMapString += colorMapTemplate.format(nameFromIndex, colorFromIndex)
 
-        colorString+= colorTemplate.format(nameFromIndex, CLASS_NAME)
+        colorString+= MaterialColorTemplate.format(nameFromIndex, CLASS_NAME)
         index += 1
     createFlutterCode(colorString, colorMapString, flutterCode)
 
