@@ -92,6 +92,7 @@ def getColorShadeFromWeb(color):
 # Get all the colors Together
 def getAllColorsMapTogether(colorString,colorMapString, flutterCode):
     index = 0
+    print("Loading...")
     while index < len(arrayColorsAndNames):
         nameFromIndex = arrayColorsAndNames[index][0]
         colorFromIndex = arrayColorsAndNames[index][1].lstrip("#")
