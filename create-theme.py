@@ -47,14 +47,14 @@ def askColors():
     index = 0
     while(index < numberOfColors):
         if(index+1 == numberOfColors):
-            userInput = str(raw_input())
+            userInput = str(input())
             if(userInput.find(":") != -1 and isHex(userInput)):
                 colors += userInput
             else:
                 print("Try using: <color name>:<hex color code>")
                 sys.exit()
         else:
-            userInput = str(raw_input())
+            userInput = str(input())
             if(userInput.find(":") != -1  and isHex(userInput)):
                 colors += userInput + ","
             else:
@@ -102,10 +102,10 @@ def getAllColorsMapTogether(colorString,colorMapString, flutterCode):
                 colorShades[6], colorShades[7], colorShades[8], colorShades[9])
             colorString += MaterialColorTemplate.format(nameFromIndex, CLASS_NAME)
             index += 1
-            print(nameFromIndex+ u"\u2714".encode('utf8'))
+            print(nameFromIndex+ ' ✔️')
             pass
         except IndexError:
-            print(nameFromIndex+ u"\u2716".encode('utf8'))
+            print(nameFromIndex+ ' ✖️')
             os.exit()
             pass
     createFlutterCode(colorString, colorMapString, flutterCode)

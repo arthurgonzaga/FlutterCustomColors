@@ -6,15 +6,10 @@ git clone "https://github.com/arthurgonzaga/FlutterCustomColors.git"
 cd FlutterCustomColors
 pip install -r requirements.txt
 ```
-Open command.sh in a text editor and change the PATH_FOLDER variable to this project folder
-```
-...
-PATH_FOLDER=~/path/to/FlutterCustomColors
-...
-```
+
 Then type the following command:
 ```bash
-source ~/command.sh
+source ./command.sh
 ```
 >You can find how to make the command available in the Terminal [here](https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e#b79f).
 >
