@@ -106,8 +106,7 @@ def getAllColorsMapTogether(colorString,colorMapString, flutterCode):
             pass
         except IndexError:
             print(nameFromIndex+ ' ✖️')
-            os.exit()
-            pass
+            return
     createFlutterCode(colorString, colorMapString, flutterCode)
 
 # Get all the templates together 
